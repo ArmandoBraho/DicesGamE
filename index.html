@@ -1,28 +1,212 @@
-<html>
-    <head><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-        <link rel="stylesheet" href="index.css">
-    </head>
-    <body>
-        <div class="container">
-            <h1 id="message">Player 1 Turn</h1>
-            <div class="players">
-                <div id="player1">
-                    <h1>Score: 
-                        <span id="player1Scoreboard">0</span>
-                    </h1>
-                    <div id="player1Dice" class="dice active">-</div>
-                </div>
-                <div id="player2">
-                    <h1>Score: 
-                        <span id="player2Scoreboard">0</span>
-                    </h1>
-                    <div id="player2Dice" class="dice">-</div>
-                </div>
-            </div>
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
 
-            <button id="rollBtn">Roll Dice 🎲</button>
-            <button id="resetBtn">Reset Game 🔁</button>
-        </div>
-        <script src="index.js"></script>
-    </body>
-</html>
+body {
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color:#707070;
+}
+
+/* =================
+Typography
+================= */
+/* .image-strech{
+    height:90%;
+} */
+
+.widget-title{
+    margin-top:0;
+}
+
+.widget-recent-post{
+    border-bottom: 0.1em solid #707070;
+}
+.widget-last-post{
+    border-bottom:0;
+}
+.widget-body{
+    color:   #143774; 
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.article-body-link{
+    color:#1792D2;
+}
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+h2{
+    color:#143774;
+}
+
+h3{
+    color: #143774;
+    font-weight: lighter;
+}
+.site-title{
+    font-size:2rem;
+    font-family: 'Lora', serif;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #1792d2;
+    font-size: .75rem;
+    margin: 0;
+}
+
+img{
+    width:100%;
+}
+
+.article-title{
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    margin-top:0;
+}
+
+.article-body{
+    font-weight: lighter;
+    font-size: 1.125rem;
+}
+
+.article-read-more{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875 rem;
+    color:#1792D2;
+}
+
+/* =================
+Layout
+================= */
+
+.sidebar{
+    padding-left:0;
+}
+.sidebar-widget{
+    border:2em solid #EBEBEB  ;  
+    margin-bottom:3em;
+    padding:1.5em;
+}
+
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.container-nav {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article-featured{
+    border-bottom:0.15em solid #707070;
+    padding-bottom: 0.75em;
+}
+.article-recent{
+    display:flex;    
+    margin:2em 0 ;
+}
+
+.container-content{
+    display:flex;
+    margin:3em;
+    /* width:90%; */
+    justify-content: space-between;
+}
+
+.container-footer{
+    text-align: center;
+    padding:2em 0;
+}
+
+
+footer{
+    width:100%;
+    background-color:#143774;
+    color:#FFFFFF;
+    margin:0px 0px;
+}
+
+.footer-text{
+    margin:0 0;
+}
+
+main{
+    width:70%;
+}
+
+aside{
+    width: 25%;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 2em 0;
+}
+
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+    
+    header {
+        text-align: center;
+    }
+}
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav li {
+    margin-left: 2em;
+}
+
+nav a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em 0;
+}
+
+nav a:hover,
+nav a:focus {
+    color: #1792d2;
+}
+
+.current-page {
+    border-bottom: 1px solid #707070;
+}
+
+.current-page:hover {
+    color: #707070;
+}
+
+@media (max-width: 675px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin: .5em 0;
+    }
+}
