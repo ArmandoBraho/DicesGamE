@@ -1,89 +1,212 @@
-html, body { 
-    --color-1: #a8e6cf;
-    --color-2: #dcedc1; 
-    --color-3: #ffd3b6; 
-    --color-4: #ffaaa5; 
-    --color-5: #ff8b94;
-    margin: 0;
-    padding: 0;
-}
+/*  Fonts
+-----
+font-family: 'Lora', serif;
+font-family: 'Ubuntu', sans-serif;
+*/
 
 body {
-    padding-top: 50px;
-    background-image: linear-gradient(135deg, var(--color-1) , var(--color-2));
-    font-family: 'Roboto', sans-serif;
-    height: 100vh;
-    color: black;
+    margin: 0;
+    font-family: 'Ubuntu', sans-serif;
+    color:#707070;
+}
+
+/* =================
+Typography
+================= */
+/* .image-strech{
+    height:90%;
+} */
+
+.widget-title{
+    margin-top:0;
+}
+
+.widget-recent-post{
+    border-bottom: 0.1em solid #707070;
+}
+.widget-last-post{
+    border-bottom:0;
+}
+.widget-body{
+    color:   #143774; 
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.article-body-link{
+    color:#1792D2;
+}
+h1 {
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    color: #143774;
+    font-size: 2rem;
+    margin: 0;
+}
+
+h2{
+    color:#143774;
+}
+
+h3{
+    color: #143774;
+    font-weight: lighter;
+}
+.site-title{
+    font-size:2rem;
+    font-family: 'Lora', serif;
+}
+
+.subtitle {
+    font-weight: bold;
+    color: #1792d2;
+    font-size: .75rem;
+    margin: 0;
+}
+
+img{
+    width:100%;
+}
+
+.article-title{
+    font-family: 'Lora', serif;
+    font-size: 1.5rem;
+    margin-top:0;
+}
+
+.article-body{
+    font-weight: lighter;
+    font-size: 1.125rem;
+}
+
+.article-read-more{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.875 rem;
+    color:#1792D2;
+}
+
+/* =================
+Layout
+================= */
+
+.sidebar{
+    padding-left:0;
+}
+.sidebar-widget{
+    border:2em solid #EBEBEB  ;  
+    margin-bottom:3em;
+    padding:1.5em;
 }
 
 .container {
-    width: 400px;
-    text-align: center;
+    width: 90%;
+    max-width: 900px;
     margin: 0 auto;
-    background-color: white;
-    box-shadow: -2px 6px 18px 3px rgba(0,0,0,0.75);
-    padding: 50px;
 }
 
-.players {
-    width: 100%;
+.container-nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
-.dice {
-    border-radius: 10px;
-    width: 100px;
-    height: 100px;
-    background-color: var(--color-3);
-    margin: 0 auto;
-    font-size: 80px;
-    display: block;
-    align-items: center;
+.article-featured{
+    border-bottom:0.15em solid #707070;
+    padding-bottom: 0.75em;
+}
+.article-recent{
+    display:flex;    
+    margin:2em 0 ;
+}
+
+.container-content{
+    display:flex;
+    margin:3em;
+    /* width:90%; */
+    justify-content: space-between;
+}
+
+.container-footer{
+    text-align: center;
+    padding:2em 0;
+}
+
+
+footer{
+    width:100%;
+    background-color:#143774;
+    color:#FFFFFF;
+    margin:0px 0px;
+}
+
+.footer-text{
+    margin:0 0;
+}
+
+main{
+    width:70%;
+}
+
+aside{
+    width: 25%;
+}
+
+header {
+    background: #f8f8f8;
+    padding: 2em 0;
+}
+
+@media (max-width: 675px) {
+    .container-nav {
+        flex-direction: column;
+    }
+    
+    header {
+        text-align: center;
+    }
+}
+
+/* navigation */
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
     justify-content: center;
 }
 
-
-button {
-    color: #fff;
-    padding: 20px 30px;
-    font-size: 20px;
-    margin: 40px auto;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
+nav li {
+    margin-left: 2em;
 }
 
-#rollBtn {
-    background-color: var(--color-5);
-}
-#rollBtn:hover {
-    text-shadow: 0px 0px 20px black;
-    background-color:red;    
-}
-
-
-#resetBtn {
-    background-color: var(--color-4);
+nav a {
+    text-decoration: none;
+    color: #707070;
+    font-weight: 700;
+    padding: .25em 0;
 }
 
-button:focus {
-    outline: none;
+nav a:hover,
+nav a:focus {
+    color: #1792d2;
 }
 
-#resetBtn {
-    display: none;
+.current-page {
+    border-bottom: 1px solid #707070;
 }
 
-
-
-.dice {
-    box-shadow: -2px 6px 18px 2px rgba(0,0,0,0.75);
-    background-image: url("images/giphyDraw.gif");
-    background-size:100% 100%;
-    background-repeat: no-repeat;
+.current-page:hover {
+    color: #707070;
 }
-/* //if the order is inverted then we have a problem with the background shadow */
-.active{
-    box-shadow: -2px 6px 18px 11px rgba(0,0,0,0.75);
+
+@media (max-width: 675px) {
+    nav ul {
+        flex-direction: column;
+    }
+    
+    nav li {
+        margin: .5em 0;
+    }
 }
